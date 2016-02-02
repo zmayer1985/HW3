@@ -5,14 +5,16 @@ $(function() {
     // Put your code here to change the "markup" variable.
     // Don't change any other code in this file. You will be sad.
     // var markup = "The weather report... " + "will be here when I finish my homework.";
-    var markup = "The weather report is " + data.daily.summary;
-    var markup = markup + '<p> Tomorrows forecast is ' + data.daily.data[1].summary + ' and the day after is expected to bring ' + data.daily.data[2].summary;
-    var daily_summary = ' <br />Currently the temperature is ' + data.currently.temperature + ' degrees with a windspeed of ' + data.currently.windSpeed + ' mph and a dewpoint of ' + data.currently.dewPoint + markup;
+    var markup = " The weather report is " + data.daily.summary;
+    var markup = markup + '<p> More specifically, the forecast for tomorrow is ' + data.daily.data[1].summary + ' with a high temperatue of ' + data.daily.data[1].temperatureMax + ' degrees';
+    var markup = markup + '<p> The following day should be ' + data.daily.data[2].summary + ' with a high temperatue of ' + data.daily.data[2].temperatureMax + ' degrees';
+
+    var daily_summary = '<p> Currently the temperature is ' + data.currently.temperature + ' degrees with a windspeed of ' + data.currently.windSpeed + ' mph and a dewpoint of ' + data.currently.dewPoint + markup;
 
 
-    $('.weather-report').html(daily_summary); // Returns the variable as html to the class weather-report
+    $('.weather-report').html(daily_summary);
 
-    confirm("Is this what you wanted? Click ok if so.")
+    confirm("I figured it out! Click ok if you agree.")
 
   }
 
