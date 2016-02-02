@@ -6,8 +6,8 @@ $(function() {
     // Don't change any other code in this file. You will be sad.
     // var markup = "The weather report... " + "will be here when I finish my homework.";
     var markup = "The weather report is " + data.daily.summary;
-
-    var daily_summary = markup + ' <br />Currently the temperature is ' + data.currently.temperature + ' degrees with a windspeed of ' + data.currently.windSpeed + ' mph.';
+    var markup = markup + '<p> Tomorrows forecast is ' + data.daily.data[1].summary + ' and the day after is expected to bring ' + data.daily.data[2].summary;
+    var daily_summary = ' <br />Currently the temperature is ' + data.currently.temperature + ' degrees with a windspeed of ' + data.currently.windSpeed + ' mph and a dewpoint of ' + data.currently.dewPoint + markup;
 
 
     $('.weather-report').html(daily_summary); // Returns the variable as html to the class weather-report
